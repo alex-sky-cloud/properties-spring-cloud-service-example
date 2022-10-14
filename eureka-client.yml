@@ -25,7 +25,7 @@ eureka:
     # становиться ли доступным для обнаружения.
     register-with-eureka: true
     service-url:
-      #Адрес сервера регистрации(eureka-server)
+      #Адрес сервера регистрации(eureka-server.yml)
       defaultZone: ${IP_ADDRESS_SERVICE_DISCOVERY}:${SERVER_PORT_SERVICE_DISCOVERY}/eureka
 logging:
   pattern:

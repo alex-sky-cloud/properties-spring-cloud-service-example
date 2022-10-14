@@ -14,7 +14,7 @@ server:
   port: ${SERVER_PORT_GATEWAY}
 spring:
   application:
-    name: api-gateway # имя текущего сервиса
+    name: api-gateway.yml # имя текущего сервиса
   cloud:
     gateway:
       discovery:
@@ -31,7 +31,7 @@ spring:
       routes:
         # уникальный id описываемого маршрута
         # с помощью данного id, можно работать также с этим маршрутом
-        - id: info-application-eureka-client
+        - id: info-application-eureka-client.yml
           # указываем uri endpoint, на который нужно перенаправить запрос
           # также указываем тип http-метода, которым этот запрос должен быть обработан
           predicates:
@@ -39,11 +39,11 @@ spring:
             - Method=GET
           # Указываем имя сервиса, на который должен быть перенаправлен данный запрос.
           # 'lb' - означает load balancer, так как Api gateway будет балансировать нагрузку
-          # если при горизонтальном масштабировании, будет несколько реплик сервиса - eureka-client
-          uri: lb://eureka-client
+          # если при горизонтальном масштабировании, будет несколько реплик сервиса - eureka-client.yml
+          uri: lb://eureka-client.yml
         # уникальный id описываемого маршрута
         # с помощью данного id, можно работать также с этим маршрутом
-        - id: info-application-eureka-client-id
+        - id: info-application-eureka-client.yml-id
           # указываем uri endpoint, на который нужно перенаправить запрос
           # также указываем тип http-метода, которым этот запрос должен быть обработан
           predicates:
@@ -51,11 +51,11 @@ spring:
             - Method=GET
           # Указываем имя сервиса, на который должен быть перенаправлен данный запрос.
           # 'lb' - означает load balancer, так как Api gateway будет балансировать нагрузку
-          # если при горизонтальном масштабировании, будет несколько реплик сервиса - eureka-client
-          uri: lb://eureka-client
-        - id: info-application-eureka-client-id-second-copy
+          # если при горизонтальном масштабировании, будет несколько реплик сервиса - eureka-client.yml
+          uri: lb://eureka-client.yml
+        - id: info-application-eureka-client.yml-id-second-copy
           predicates:
             - Path=/api/id-second-service
             - Method=GET
-          uri: lb://eureka-client-second-copy
+          uri: lb://eureka-client.yml-second-copy
 
