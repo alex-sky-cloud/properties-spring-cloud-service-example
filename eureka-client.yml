@@ -36,7 +36,4 @@ server:
   # однако в этом случае, Service Discovery не сможет отобразить порт подключения данного сервиса
   # на своей Admin-панели (dashboard).
   port: ${SERVER_PORT_CLIENT}
-spring:
-  application:
-    name: eureka-client # Id-приложения. Его желательно указывать всегда в микро-сервисных приложениях
 
