@@ -1,15 +1,7 @@
-SERVER_PORT_SERVICE_DISCOVERY: 8761
-IP_ADDRESS_SERVICE_DISCOVERY: http://localhost
 SERVER_PORT_GATEWAY: 8765
 
-eureka:
-  client:
-    service-url:
-      # url, откуда можно запросить информацию о зарегистрированных микросервисах
-      defaultZone: ${IP_ADDRESS_SERVICE_DISCOVERY}:${SERVER_PORT_SERVICE_DISCOVERY}/eureka
-logging:
-  pattern:
-    console: '%C{1.} [%-5level] %d{HH:mm:ss} - %msg%n'
+# эту настройку можно не выносить, если вы хотите,
+# чтобы порт был закреплен за приложением, которое запускается
 server:
   port: ${SERVER_PORT_GATEWAY}
   
