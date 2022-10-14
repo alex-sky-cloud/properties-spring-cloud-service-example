@@ -5,6 +5,7 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
   # https://docs.spring.io/spring-cloud-netflix/docs/current/reference/html/#changing-the-eureka-instance-id
-  service-url:
+  client:
+    service-url:
     #Адрес сервера регистрации(eureka-server.yml)
-    defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
