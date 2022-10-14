@@ -30,7 +30,7 @@ spring:
       routes:
         # уникальный id описываемого маршрута
         # с помощью данного id, можно работать также с этим маршрутом
-        - id: info-application-eureka-client
+        - id: info-application-eureka-client-info
           # указываем uri endpoint, на который нужно перенаправить запрос
           # также указываем тип http-метода, которым этот запрос должен быть обработан
           predicates:
@@ -42,7 +42,7 @@ spring:
           uri: lb://eureka-client
         # уникальный id описываемого маршрута
         # с помощью данного id, можно работать также с этим маршрутом
-        - id: info-application-eureka-client
+        - id: info-application-eureka-client-id
           # указываем uri endpoint, на который нужно перенаправить запрос
           # также указываем тип http-метода, которым этот запрос должен быть обработан
           predicates:
@@ -52,7 +52,7 @@ spring:
           # 'lb' - означает load balancer, так как Api gateway будет балансировать нагрузку
           # если при горизонтальном масштабировании, будет несколько реплик сервиса - eureka-client.yml
           uri: lb://eureka-client
-        - id: info-application-eureka-client
+        - id: info-application-eureka-client-copy
           predicates:
             - Path=/api/id-second-service
             - Method=GET
