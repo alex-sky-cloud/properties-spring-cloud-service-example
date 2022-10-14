@@ -11,7 +11,9 @@ logging:
   pattern:
     console: '%C{1.} [%-5level] %d{HH:mm:ss} - %msg%n'
 server:
-  port: ${SERVER_PORT_GATEWAY}
+  # использование переменных не позволит правильно обрабатывать настройки api-gateway
+  #  (маршруты могут не работать). Поэтому нужно явно указывать адрес.
+  port: 8765 # ${SERVER_PORT_GATEWAY}
   
 spring:
   cloud:
