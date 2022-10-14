@@ -1,4 +1,4 @@
-
+SERVER_PORT_CLIENT: 0
 
 eureka:
   client:
