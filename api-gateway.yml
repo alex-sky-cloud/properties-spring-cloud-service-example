@@ -50,3 +50,11 @@ spring:
             - Method=GET
           uri: lb://eureka-client-second-copy
 
+management:
+  endpoint:
+    gateway:
+      enabled: true # включаем Actuator
+  endpoints:
+    web:
+      exposure:
+        include: * # указываем, что нужно включить все endpoints of the Actuator
