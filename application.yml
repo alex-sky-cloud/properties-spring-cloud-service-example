@@ -2,3 +2,12 @@ logging:
   pattern:
     # определяем формат более короткого отображение логов
     console: '%C{1.yaml.} [%-5level] %d{HH:mm:ss} - %msg%n'
+
+management:
+  endpoint:
+    gateway:
+      enabled: true # включаем Actuator
+  endpoints:
+    web:
+      exposure:
+        include: "*" #указываем, что нужно включить все endpoints of the Actuator
